@@ -17,8 +17,7 @@ var gulp = require('gulp'),
     rtlCss = require('gulp-rtlcss'),
     concat = require('gulp-concat'),
     merge = require('merge-stream'),
-    eslint = require('gulp-eslint'),
-    nodeResolve = require('resolve');
+    eslint = require('gulp-eslint');
 
 var vendors = [];
 
@@ -36,7 +35,7 @@ gulp.task('vendors', function () {
     var stream = browserify();
 
     vendors.forEach(function(item) {
-        stream.require(nodeResolve.sync(item), { expose: item });
+        stream.require(item);
     });
 
     stream
