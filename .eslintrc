@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": ["error", 120],
+    "linebreak-style": ["error", "windows"],
+    "jsx-a11y/label-has-for": "off",
+     "new-cap": ["error", {
+          "capIsNewExceptions": ["Map","List", "KeyMirror"]
+        }]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "vector6": true,
+    "$": true,
+    "toastr": true,
+    "treeCrawl": true,
+    "FormData": true,
+    "moment": true,
+    "Highcharts": true
+  }
+}
